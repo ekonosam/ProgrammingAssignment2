@@ -20,7 +20,7 @@ makeCacheMatrix<- function(x=matrix()){
             } # Prevent the "cacheSolve" function from executing the error "The matrix must be square"
         }
         get_mat<- function() x
-        set_inv<- function(inverse) inv <<- solve(inverse)
+        set_inv<- function(inverse) inv <<- inverse
         get_inv<- function() inv
         list(set_mat= set_mat, get_mat=get_mat,set_inv=set_inv,get_inv=get_inv)
     } else {
